@@ -1,4 +1,4 @@
-# Add Static Thumbnails for Audio Fields
+# Add Static Thumbnails for Audio Files
 
 Add following configurations:
 1. Apache Sling Service User Mapper Service Ammendment:
