@@ -7,7 +7,7 @@
     description="No Description"
     title="Add Static Thumbnails">
     <metaData
-        cq:generatingPage="/conf/global/settings/workflow/models/add-static-thumbnails/jcr:content"
+        cq:generatingPage="/conf/thumbnailwf/settings/workflow/models/add-static-thumbnails/jcr:content"
         cq:lastModified="{Long}1591290287365"
         cq:lastModifiedBy="admin"
         jcr:primaryType="nt:unstructured"/>

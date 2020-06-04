@@ -1,6 +1,14 @@
-# Sample AEM project template
+# Add Static Thumbnails for Audio Fields
 
-This is a project template for AEM-based applications. It is intended as a best-practice set of examples as well as a potential starting point to develop your own functionality.
+Add following configurations:
+1. Apache Sling Service User Mapper Service Ammendment:
+![](user-mapper.PNG)
+2. Change Exisitng Update Asset Launcher and add one more condition:
+(jcr:content/jcr:mimeType!=audio/.*)
+![](dam-update-asset.PNG)
+3. Add new Update Asset Launcher for audio files:
+![](new-launcher.png)
+
 
 ## Modules
 
@@ -8,9 +16,6 @@ The main parts of the template are:
 
 * core: Java bundle containing all core functionality like OSGi services, listeners or schedulers, as well as component-related Java code such as servlets or request filters.
 * ui.apps: contains the /apps (and /etc) parts of the project, ie JS&CSS clientlibs, components, templates, runmode specific configs as well as Hobbes-tests
-* ui.content: contains sample content using the components from the ui.apps
-* ui.tests: Java bundle containing JUnit tests that are executed server-side. This bundle is not to be deployed onto production.
-* ui.launcher: contains glue code that deploys the ui.tests bundle (and dependent bundles) to the server and triggers the remote JUnit execution
 
 ## How to build
 
