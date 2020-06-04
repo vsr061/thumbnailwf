@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Panel"
+    title="Arguments">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <arguments
+            jcr:primaryType="cq:Widget"
+            collapsed="{Boolean}false"
+            collapsible="{Boolean}false"
+            title="Process Arguments"
+            xtype="dialogfieldset">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <configs
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="A thumbnail is defined by the width:height:center tripple. Width and height define the thumbnail size in pixel. If the center flag is set to true, the thumbnail image will have exactly the size given by the configuraiton. If the resized image is smaller it will be centered within the thumbnail. Example: 70:70:false."
+                    fieldLabel="Thumbnails"
+                    name="./metaData/CONFIGS"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="nt:unstructured"
+                        xtype="textfield"/>
+                </configs>
+            </items>
+        </arguments>
+    </items>
+</jcr:root>

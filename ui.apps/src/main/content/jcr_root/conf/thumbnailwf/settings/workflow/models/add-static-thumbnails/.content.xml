@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:designPath="/libs/settings/wcm/designs/default"
+        cq:lastModified="{Date}2020-06-04T22:34:38.945+05:30"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/cq/workflow/templates/model"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Add Static Thumbnails"
+        sling:resourceType="cq/workflow/components/pages/model">
+        <flow
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="foundation/components/parsys">
+            <addstaticthumbnails
+                jcr:created="{Date}2020-06-04T22:34:15.196+05:30"
+                jcr:createdBy="admin"
+                jcr:description="This process will create one or more static thumbnails for the asset to be processed by coping thumbnail renditions from given asset to target payload asset ."
+                jcr:lastModified="{Date}2020-06-04T22:34:38.942+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Add Static Thumbnails"
+                sling:resourceType="thumbnailwf/components/workflowprocess/addstaticthumbnails">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    CONFIGS="/content/dam/we-retail/en/products/apparel/gloves/Classic Leather.jpg"
+                    PROCESS="com.thumbnailwf.core.workflow.processes.AddStaticThumbnails"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </addstaticthumbnails>
+            <damupdateassetworkfl
+                jcr:created="{Date}2020-06-04T22:34:20.581+05:30"
+                jcr:createdBy="admin"
+                jcr:description="This process will send DamEvent.Type.DAM_UPDATE_ASSET_WORKFLOW_COMPLETED event when DAM update asset workflow is completed"
+                jcr:lastModified="{Date}2020-06-04T22:34:20.581+05:30"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                jcr:title="DAM Update Asset Workflow Completed"
+                sling:resourceType="dam/components/workflow/damupdateassetworkflowcompletedprocess">
+                <metaData
+                    jcr:primaryType="nt:unstructured"
+                    PROCESS="com.day.cq.dam.core.impl.process.DamUpdateAssetWorkflowCompletedProcess"
+                    PROCESS_AUTO_ADVANCE="true"/>
+            </damupdateassetworkfl>
+        </flow>
+    </jcr:content>
+</jcr:root>

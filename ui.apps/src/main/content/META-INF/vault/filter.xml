@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+	<filter root="/apps/thumbnailwf" />
+	<filter root="/conf/thumbnailwf" />
+	<filter root="/var/workflow/models/thumbnailwf" />
+</workspaceFilter>
